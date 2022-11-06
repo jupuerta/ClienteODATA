@@ -1,0 +1,51 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Resumen";
+}
+
+<h1>Resumen</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Numero Ejercitos
+            </th>
+            <th>
+                Fuerza Total
+            </th>
+            <th>
+                Fuerza Media
+            </th>
+            <th>
+                Suma Años Experiencia
+            </th>
+            <th>
+                Media Años Experiencia
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Model[0]
+            </td>
+            <td>
+                @Model[1]
+            </td>
+            <td>
+                @Model[2]
+            </td>
+            <td>
+                @Model[3]
+            </td>
+            <td>
+                @Model[4]
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button onclick="location.href='@Url.Action("Index", "Ejercito")'">Todos Ejercitos</button>
+<button onclick="location.href='@Url.Action("PotEjercito", "Ejercito")'" >Ejercito Más Poderoso</button>
+<button onclick="location.href='@Url.Action("Resumen", "Ejercito")'" >Resumen</button>

@@ -1,0 +1,51 @@
+﻿@model Demos.Ejercito
+
+@{
+    ViewData["Title"] = "PotEjercito";
+}
+
+<h1>Ejercito Más Poderoso</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechNac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FuerzaCombate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ubicacion)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.FechNac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.FuerzaCombate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Ubicacion)
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button onclick="location.href='@Url.Action("Index", "Ejercito")'">Todos Ejercitos</button>
+<button onclick="location.href='@Url.Action("PotEjercito", "Ejercito")'" >Ejercito Más Poderoso</button>
+<button onclick="location.href='@Url.Action("Resumen", "Ejercito")'" >Resumen</button>

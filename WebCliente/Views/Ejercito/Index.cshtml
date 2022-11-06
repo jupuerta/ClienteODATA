@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Demos.Ejercito>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Todos los ejercitos</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechNac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FuerzaCombate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ubicacion)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechNac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuerzaCombate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion)
+            </td>
+        </tr>
+}
+
+    </tbody>
+</table>
+<button onclick="location.href='@Url.Action("Index", "Ejercito")'">Todos Ejercitos</button>
+<button onclick="location.href='@Url.Action("PotEjercito", "Ejercito")'" >Ejercito Más Poderoso</button>
+<button onclick="location.href='@Url.Action("Resumen", "Ejercito")'" >Resumen</button>

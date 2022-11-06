@@ -1,0 +1,19 @@
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="Demos" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityType Name="Ejercito">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="FechNac" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="FuerzaCombate" Type="Edm.Single" Nullable="false" />
+        <Property Name="Ubicacion" Type="Edm.String" Nullable="false" />
+      </EntityType>
+      <EntityContainer Name="DefaultContainer">
+        <EntitySet Name="Ejercitosos" EntityType="Demos.Ejercito" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
